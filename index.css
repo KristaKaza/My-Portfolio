@@ -308,7 +308,6 @@ html {
 .buttons-inline {
   gap: 30px;
   display: flex;
-  flex-wrap: wrap;
 }
 
 .buttons-inline a {
