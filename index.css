@@ -10,12 +10,17 @@ body {
   color: white;
 }
 
+main {
+  top: 61px;
+  position: relative;
+}
+
 html {
   scroll-behavior: smooth;
 }
 
 .grid {
-  max-width: 1120px;
+  max-width: 950px;
   margin: 0 auto;
   color: #fff;
   padding: 0 20px;
@@ -58,6 +63,10 @@ html {
   align-items: center;
   z-index: 1;
   transition: 0.5s;
+}
+
+.menu {
+  background-color: #151616;
 }
 
 .menu li {
@@ -154,6 +163,10 @@ html {
 
 .navigation input:checked ~ .menu {
   right: 0;
+  align-items: flex-start;
+  top: 84px;
+  padding-top: 0;
+  height: auto;
 }
 
 .hidden-label {
@@ -213,27 +226,27 @@ html {
 }
 
 .img-text-container img {
-  width: 85%;
+  width: 35%;
   object-fit: cover;
   border: 8px solid #5a13b5;
   max-width: 100%;
   height: 335px;
   outline: 15px solid #18191f;
   border-radius: 50%;
-  margin-left: 65px;
 }
 
-.intro-container {
+/* .intro-container {
   height: calc(100vh - 200px);
   display: grid;
   place-items: center;
-}
+} */
 
 .img-text-container {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-gap: 30px;
-  padding: 0 20px;
+  display: flex;
+  justify-items: end;
+  flex-direction: row;
+  justify-content: space-between;
+  flex-wrap: wrap;
 }
 
 .img-text-container h2 {
@@ -242,7 +255,7 @@ html {
 }
 
 .img-text-container p {
-  width: 31em;
+  width: 24em;
   padding-bottom: 20px;
   line-height: 1.6;
   font-size: 20px;
@@ -256,7 +269,7 @@ html {
 }
 
 .projects-btn {
-  padding: 17px 67px;
+  padding: 10px 50px;
   font-size: 18px;
   background-color: #3c0088;
   border: none;
@@ -275,7 +288,7 @@ html {
 }
 
 .contact-btn {
-  padding: 17px 67px;
+  padding: 10px 50px;
   font-size: 18px;
   color: white;
   border: none;
@@ -310,6 +323,7 @@ html {
   align-items: center;
   justify-content: center;
   margin-bottom: 100px;
+  padding-top: 150px;
 }
 
 .field {
@@ -361,7 +375,7 @@ html {
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: space-between;
-  margin-top: 30px;
+  margin-top: 52px;
 }
 
 .website {
@@ -417,7 +431,11 @@ html {
 }
 
 /* For screens smaller than 1000px */
-@media (max-width: 1000px) {
+@media (max-width: 900px) {
+  .intro-container {
+    height: auto;
+  }
+
   .my-projects {
     grid-template-columns: 1fr;
     grid-gap: 30px;
@@ -456,7 +474,7 @@ html {
   flex-wrap: wrap;
   justify-content: space-between;
   margin-top: 50px;
-  align-items: flex-start;
+  align-items: flex-end;
 }
 
 .img-text-container-2 {
@@ -470,11 +488,11 @@ html {
 .img-text-container-2 p {
   line-height: 1.6;
   font-size: 20px;
-  width: 29em;
+  width: 22em;
 }
 
 .about-container img {
-  width: 40%;
+  width: 36%;
   object-fit: cover;
   margin-top: 30px;
 }
@@ -521,11 +539,12 @@ html {
 }
 
 .flex-contact {
+  margin-top: 100px;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  align-items: center;
   flex-wrap: wrap;
+  align-items: center;
 }
 
 .message-me {
@@ -549,7 +568,7 @@ textarea {
   background-color: rgb(30, 30, 30);
   border: 1px solid rgb(150, 150, 150);
   border-radius: 4px;
-  width: 385px;
+  width: 329px;
   max-width: 394px;
   height: 159px;
   max-height: 200px;
@@ -600,14 +619,14 @@ textarea {
   color: white;
   cursor: pointer;
 }
-
+/* 
 section {
   padding: 1em;
   height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
-}
+} */
 
 .scaleUp {
   opacity: 0;
@@ -631,7 +650,7 @@ textarea {
   color: white;
 }
 
-@media screen and (max-width: 1000px) {
+@media screen and (max-width: 900px) {
   .flex-contact {
     display: flex;
     flex-direction: column-reverse;
