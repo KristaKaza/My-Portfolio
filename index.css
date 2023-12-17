@@ -671,3 +671,7 @@ textarea {
     width: auto;
   }
 }
+
+.visually-hidden {
+  display: none;
+}
